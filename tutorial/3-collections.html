@@ -111,10 +111,7 @@ var CommentsView = Backbone.View.extend({
      * Remember, we have the underscore functions: */
     this.$el.find('ul').append(this.collection.map(function(comment) {
       // YOUR CODE HERE
-      console.log(comment);
-      '<li>',
-      comment,
-      '</li>'
+      return '<li>' + comment.get('message') + '</li>';
     }));
 
     return this.$el;
